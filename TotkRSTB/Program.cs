@@ -1,6 +1,7 @@
 ﻿using RstbLibrary;
 using RstbLibrary.Calculations;
 using RstbLibrary.Core;
+using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -17,15 +18,16 @@ namespace TotkRSTB
         {
             if (args.Length <= 0 || args[0].ToLower() == "-h" || args[0].ToLower() == "--help")
             {
-                Console.WriteLine("\nTotkRSTB.exe [option] {arguments}");
-                Console.WriteLine("A simple CMD tool for editing RSTB/RESTBL files for TOTK.");
+                Console.WriteLine("\nMiiRSTB.exe [option] {arguments}");
+                Console.WriteLine("A simple CMD tool, fork of TotKRSTB for editing RSTB files for Nintendo Switch Sports.");
+                Console.WriteLine("HashTable will be worked on in the future.");
                 Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
                 Console.WriteLine("  [.yaml file]                                                      Converts a yaml file to RESTBL");
-                Console.WriteLine("  [.rsizetable.zs file]                                             Converts a RESTBL file to yaml");
-                Console.WriteLine("  [--merge/-m] {Vanilla RSTB} {Modded RSTB} {Output RSTB Name}      Merges 2 RESTBL files into one");
-                Console.WriteLine("  [--patch/-p] {Vanilla RSTB} {RSTB Yaml patch} {Output RSTB Name}  Patches a RESTBL file with a yaml file");
+                Console.WriteLine("  [.rsizetable.zs file]                                             Converts a RSTB file to yaml");
+                Console.WriteLine("  [--merge/-m] {Vanilla RSTB} {Modded RSTB} {Output RSTB Name}      Merges 2 RSTB files into one");
+                Console.WriteLine("  [--patch/-p] {Vanilla RSTB} {RSTB Yaml patch} {Output RSTB Name}  Patches a RSTB file with a yaml file");
                 Console.WriteLine("  [--makepatch/-mp] {Vanilla RSTB} {Modded RSTB}                    Create a yaml patch file with just the modded entries");
-                Console.WriteLine("\nNote: TotkRSTB will always choose the entry with the highest value, \nremoving entries will result in the program choosing the vanilla.");
+                Console.WriteLine("\nNote: MiiRSTB will always choose the entry with the highest value, \nremoving entries will result in the program choosing the vanilla.");
                 return;
             }
 
